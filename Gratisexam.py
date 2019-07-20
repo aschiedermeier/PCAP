@@ -125,22 +125,44 @@ print(dir)
 #dir= {Mom: '5551234567', Dad: '5557654321'}
 print(dir)
 
-print("""\n#11: """)
+print("""\n#11: A not D !!!Error in Exam!!! 
+    a module can be run like regualar code, as it is a script with funcitons and commands
+    varible __name__ changes from __main__ to modulename, dependent from where to launch""")
 
-print("\n#12: ")
+print("""\n#12: B,D
+    A: missing required pos arg 'a'
+    C: non-keyword arg after keyword arg""")
 
-print("\n#13: ")
+def fun(a,b=0):
+    return a*b
+    
+#print(fun(b=1))
+print(fun(a=0))
+#print(fun(b=1,0)) 
+print(fun(1))
 
-print("\n#14: ")
+print("""\n#13: ABC
+    """)
 
-print("\n#15: ")
+print("""\n#14: A: runtime exception, 2 errors in print line
+    1. missing one bracket ]
+    2. arguments for list and position argument mixed up, otherwise return '1' """)
+def a (l,I):
+    return l[I]
 
-print("\n#16: ")
+#print(a(0,[1))
+print(a([1],0))
 
-print("\n#17: ")
+print("""\n#15: B
+    hasattr() method to safely check, if class/object has a certain attribute""")
 
-print("\n#18: ")
+print("""\n#16: D
+    first parameter of each method is """)
 
-print("\n#19: ")
+print("""\n#17: """)
 
-print("\n#20: ")
+print("""\n#18: """)
+
+print("""\n#19: """)
+
+print("""\n#20: """)
