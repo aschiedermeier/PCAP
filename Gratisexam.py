@@ -1,6 +1,7 @@
 # Gratisexam
 # 20 questions
 # https://www.gratisexam.com/python-institute/pcap-exam/
+# many Errors in this exam, also the links to the solution look quite unprofessional
 
 print("\n#1: AC is True - a and b are the same list with different names")
 a = [1]
@@ -157,12 +158,19 @@ print("""\n#15: B
     hasattr() method to safely check, if class/object has a certain attribute""")
 
 print("""\n#16: D
-    first parameter of each method is """)
+    first parameter of each method is set by the first argument's value""")
 
-print("""\n#17: """)
+print("""\n#17: B not A !!!Error in Exam!!! 
+    the simplest possible class definition in Python 
+    needs at least one statement, e.g. 'pass'""")
+class X:
+    pass
 
-print("""\n#18: """)
+print("""\n#18: C - except Exception as e:""")
 
-print("""\n#19: """)
+print("""\n#19: D not A !!!Error in Exam!!!
+    An instance varible is stored seperately in every object,
+    in comparison to a class variable.""")
 
-print("""\n#20: """)
+print("""\n#20: A 
+    a.write('Hello\n') """)
