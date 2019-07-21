@@ -1,7 +1,7 @@
 # bitshifting
-# >> 1 equals modulo 2
+# >> 1 equals floor division 2
 # << equals times 2
-# using lambda function to create bishift function that 
+# using lambda function to create customizable function 
 
 # bitshifting
 var = 5
@@ -10,7 +10,7 @@ varLeft = var << 1
 print(varLeft)
 print(varRight)
 
-# bitshifting by 1 equals multiplying and modulo 2 
+# bitshifting by 1 equals multiplying and floor division  2 
 print(var*2)
 print (var//2)
 
@@ -45,7 +45,7 @@ for i in range (10):
     print (myLeftShift(i))
 print(9<<2)
 
-# same for right shift and modulo
+# same for right shift and floor division
 
 def myfunc1 (n):
     return lambda a: a // (2**n)
@@ -53,12 +53,12 @@ def myfunc2 (n):
     return lambda a: a >> n
 
 n=2
-myModulo = myfunc1(n)
+myFloor = myfunc1(n)
 myRightShift = myfunc2(n)
 
 for i in range (10):
     print (i,end=" ")
-    print (myModulo(i),end=" ")
+    print (myFloor(i),end=" ")
     print (myRightShift(i))
 
 
