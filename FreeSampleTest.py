@@ -301,9 +301,11 @@ for i in gen():
 print("""\n#31: ACD
     B:Some objects contain references to other objects; these are called containers. 
     Examples of containers are tuples, lists and dictionaries. The references are part of a container’s value.
-    D: The act of creating an object of the selected class is also called an instantiation 
+    D: A constructor is used to instantiate an object.
+    The act of creating an object of the selected class is also called an instantiation 
     (as the object becomes an instance of the class).
     Can be made also from simple class without constructor.
+    So: A constructor is not necessarily needed to instantiate an object, but  statement D is still true.
     E: There is no object variables in Python, only instance variables.
     """)
 
@@ -384,9 +386,9 @@ c.b()
 print()
 c.a()
 
-print("""\n#37: D: print Hello, then empty line. as pure Exception does not print out error name
+print("""\n#37: D: prints "Hello", then empty line. as pure risen Exception does not print out error name.
     alternative code:
-    ZeroDivisionError gets raised and printed""")
+    ZeroDivisionError gets raised due to 1/0 and it's name gets printed""")
 try:
     print("Hello")
     raise Exception
@@ -399,6 +401,7 @@ try:
     print(1/0)
 except Exception as e:
     print(e)
+
 print("""\n#38: D
     example 1: upper error gets raised and prints standard message A, line below does not get executed at all
     example 2: error with custom message gets raised and prints it.
@@ -417,17 +420,38 @@ class CriticalError(Exception):
 
 print("""\n#39: ADF
     correct methods (not functions) to access the file
-    A. print(file.readlines())
-    D. for l in file:
+    A. print(file.readlines()) # prints line as a list
+    B. wrong: readlines is not a function but a method
+    C: wrong:print(file.readlines(:) 1. bracket missing. 2. can't splice here
+    D. for l in file: # writes line by line, but with one empty line in between
         print(l)
-    F. print(file.read())
+    E. wrong: print(file.lines()) - no attribute lines
+    F. print(file.read()) # writes line by line, like in text, perfect method
+    G. wrong: print(read.file(test.txt)) - no item read, no method file
+
 """)
+# i need to open the file for every print command.
+# otherwise nothing to print.
+# it's enough to close it only once at the end.
+file = open("test.txt")
+print(file.readlines())
+
+file = open("test.txt")
+for l in file:
+    print(l)
+
+file = open("test.txt")
+print(file.read())
+
+file.close()
 
 print("""\n#40: ABD
     open('file','w') 
-    - either opens existing file and deletes all file content or
-    - creates new file.
+    - Opens existing file and deletes all file content.
+    - If file does not exist, it creates new file.
     A. open the file file.txt in write mode
     B. delete the file contents if the file file.txt already exists
     D. create the file file.txt if it does not exist
 """)
+f = open("file.txt", "w")
+f.close()
