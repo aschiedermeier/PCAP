@@ -172,7 +172,9 @@ idx = data.index(data[0]+3)
 print (idx)
 
 print("""\n#21: exception
-    actually 2 errors""")
+    actually 2 errors
+    1. cannot iterate integer 'len', need to use range
+    2. strings are immutable """)
 try:
     s = "abc"
     for i in len(s):
@@ -183,7 +185,9 @@ except Exception as e:
 
 try:
     s = "abc"
-    s[0]=s[0].upper()
+    for i in range(len(s)):
+        s[i]=s[i].upper()
+    print(s)
 except Exception as e:
     print (e)
     
